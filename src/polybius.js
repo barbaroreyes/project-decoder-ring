@@ -48,6 +48,4 @@ const polybius =(input, encode = true) => {
     }
     return result
 }
-
-console.log(polybius("3251131343 2543241341",false))
 module.exports = polybius;
