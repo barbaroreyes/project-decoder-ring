@@ -8,20 +8,20 @@ const polybius =(input, encode = true) => {
         15: 'v', 25: 'w', 35: 'x', 45: 'y', 55: 'z'
     }
     input = input.toLowerCase();
-    let result = ""
+    let result = "" ;
     if(encode){
         for(characters in input){
-            const character = input[characters]
+            const character = input[characters] ;
             if(character === " "){
-                result += character
+                result += character ;
                 continue
             }
             if(character === "i" || character === "j"){
-                result += 42
+                result += 42 ;
                 continue
             }
             for(letters in alphabet){
-                if(character === alphabet[letters]) result += letters
+                if(character === alphabet[letters]) result += letters ;
             }
         }
     } else {
