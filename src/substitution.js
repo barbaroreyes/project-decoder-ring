@@ -30,11 +30,10 @@ const substitution =(input, alphabet, encode = true) => {
     ];
     let result = input.toLowerCase().split('');
     alphabet = alphabet.split('');
-    if(alphabet.length !=26)return false
+    if(alphabet.length !=26)return false ;
 
     if (encode) {
-        
-      for (let i = 0; i < result.length; i++) {
+        for (let i = 0; i < result.length; i++) {
         if (alphabet.includes(result[i])) {
           let newLetter = abc.indexOf(result[i])
           str += alphabet[newLetter];

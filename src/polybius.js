@@ -7,7 +7,7 @@ const polybius =(input, encode = true) => {
         14: 'q', 24: 'r', 34: 's', 44: 't', 54: 'u',
         15: 'v', 25: 'w', 35: 'x', 45: 'y', 55: 'z'
     }
-    input = input.toLowerCase()
+    input = input.toLowerCase();
     let result = ""
     if(encode){
         for(characters in input){
@@ -29,23 +29,23 @@ const polybius =(input, encode = true) => {
             let checkIfEven = input.split(" ")
             for(word in checkIfEven){
                 if(checkIfEven[word].length%2 != 0){
-                    return result = false
+                    return result = false ;
                 } 
             }
-            const pair = `${input[0]}${input[1]}`
+            const pair = `${input[0]}${input[1]}` ;
             if(input[0] === " "){
-                result += input[0]
-                input = input.slice(1)
-                continue
+                result += input[0];
+                input = input.slice(1);
+                continue ;
             }
             for(values in alphabet){
                 if (pair === values){
-                    result += alphabet[values]
+                    result += alphabet[values];
                 }
             }
-            input = input.slice(2)
+            input = input.slice(2);
         }
     }
-    return result
+    return result ;
 }
 module.exports = polybius;
