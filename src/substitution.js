@@ -30,8 +30,7 @@ const substitution =(input, alphabet, encode = true) => {
     ];
     let result = input.toLowerCase().split('');
     alphabet = alphabet.split('');
-    if(alphabet.length !=26)return false ;
-
+    if(alphabet.includes('!@#$%^&*')||alphabet.length !=26)return false ;
     if (encode) {
         for (let i = 0; i < result.length; i++) {
         if (alphabet.includes(result[i])) {
@@ -54,5 +53,5 @@ const substitution =(input, alphabet, encode = true) => {
     }
     return str;
   }
-  console.log(substitution("You are an excellent spy", "xoyqmcgrukswaflndjpzibev"))
+  console.log(substitution("You are an excellent spy", "!@#$%^&*rukswaflnthdjpzibev"))
 module.exports = substitution;

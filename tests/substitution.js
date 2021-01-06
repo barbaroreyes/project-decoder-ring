@@ -25,6 +25,10 @@ describe("substitution()", () => {
     const expected = 'elp xhm xf mbymwwmfj dne'
     expect(actual).to.equal(expected)
   })  
+  it('return  false is alphabet includes special charaters ',()=>{
+   const actual = substitution("You are an excellent spy", "!@#$%^&*rukswaflnthdjpzibev");
+   expect(actual).to.be.false ;
+  })
 })
 
     
