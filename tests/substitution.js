@@ -29,6 +29,16 @@ describe("substitution()", () => {
    const actual = substitution("You are an excellent spy", "!@#$%^&*rukswaflnthdjpzibev");
    expect(actual).to.be.false ;
   })
+  it('if dencode sholud be a correct answer ',()=> {
+    const actual = substitution("jrufscpw", "xoyqmcgrukswaflnthdjpzibev", false);
+    const expected = 'thinkful';
+    expect(actual).to.equal(expected)
+
+  })
+  it("should be true that the alphabet contains all characters in the input, return false otherwise", () => {
+    const actual = substitution("You are an excellent spy", "xoyqmcgruks!!waflnthdjpzibev");
+    expect(actual).to.be.false;
+  });
 })
 
     
